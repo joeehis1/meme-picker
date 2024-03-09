@@ -12,6 +12,9 @@ function EmotionsContextProvider({
         setCurrentEmotion(val);
     }
 
+    // You will notice that i have a function here that is supposed to change the currentEmotion by setting state
+    // Once you see this you will probably take a look at APP.jsx
+
     const contextValue = { emotions, changeEmotion, currentEmotion };
 
     return (
