@@ -13,8 +13,8 @@ $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 $custom-ebony: #15171b;
 $custom-raisin-black: #48222f;
 $custom-crimson: #f85859;
-$body-color: $custom-raisin-black;
-// $body-bg: $custom-crimson;
+$body-color: #f1f1f1;
+$body-bg: $custom-ebony;
 $border-radius: 0.4rem;
 
 $success: #7952b3;
@@ -80,14 +80,5 @@ h4,
 h5,
 h6 {
     font-family: $font-family-serif;
-    color: $custom-ebony;
-}
-
-header {
-    h1 {
-        font-style: italic;
-    }
-}
-
-.custom-btn {
+    font-style: italic;
 }

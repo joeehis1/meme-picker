@@ -24,6 +24,7 @@ export default function Emotion({ emotion, index }) {
             }}
         >
             <span>{emotion}</span>
+            {/* You will notice that im making use of changeEmotion here from the function i created in the context file */}
             <input
                 type="radio"
                 value={emotion}

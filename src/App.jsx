@@ -21,6 +21,8 @@ function App() {
     const [emotions] = useState(initialEmotions);
     const [withAnimation, setWithAnimation] = useState(false);
     const [currentEmotion, setCurrentEmotion] = useState(emotions[0]);
+
+    // This may no longer be a thing once react 19 comes in but this is a recommended approach apparently to avoid unnecessary renders when either current emotion or withAnimation changes
     const modalImage = useMemo(() => {
         return catsData.find((cat) => {
             return withAnimation
@@ -62,6 +64,7 @@ function App() {
                             </Button>
                         </ModalFooter>
                     </Modal>
+                    {/* At which point you will probably wonder why i didnt simply pass setCurrentEmotion to the meme options form. I dont think what i did was wrong. My design choice here was in an attempt to avoid prop drilling */}
                     <EmotionsContextProvider
                         emotions={emotions}
                         currentEmotion={currentEmotion}
